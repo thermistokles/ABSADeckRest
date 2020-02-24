@@ -1,0 +1,47 @@
+<app-logoutnav></app-logoutnav>
+
+<div class="container">
+  <app-tabs></app-tabs>
+  <br>
+  <h4 class="center-align">Payment Job for Kenya</h4>
+
+  <br>
+  <br>
+
+  <table class="highlight">
+    <thead>
+    <tr>
+      <!-- <th>Country</th> -->
+      <th>Payments</th>
+      <th>Count</th>
+      <th>Start time</th>
+      <th>End time</th>
+      <th>Duration</th>
+      <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let payment of payments" (click)="selectPayment(payment)">
+      <!-- <td><input class="myinput" [(ngModel)]="payment.country" (change)="updatePayment(payment)" type="text"/></td> -->
+      <td><input class="myinput" [(ngModel)]="payment.payments" (change)="updatePayment(payment)" type="text"/></td>
+
+      <td><input [(ngModel)]="payment.count" (change)="updatePayment(payment)" type="text" /></td>
+      <td><input [(ngModel)]="payment.startDateTime" (change)="updatePayment(payment)" type="text" /></td>
+      <td><input [(ngModel)]="payment.endDateTime" (change)="updatePayment(payment)" type="text" /></td>
+      <td><input [(ngModel)]="payment.duration" (change)="updatePayment(payment)" type="text" /></td>
+      <td><a (click)="deletePayment(payment)" class="pull-right text-danger">
+        <i class="material-icons">delete_forever</i>
+      </a></td>
+    </tr>
+    </tbody>
+  </table>
+
+  <br>
+  <a class="btn-floating btn-large waves-effect waves-light right red"
+     (click)="createPayment()"
+  ><i class="material-icons">add</i> New notebook
+  </a>
+</div>
+
+
+

@@ -1,0 +1,13 @@
+<html><body><h1>DM9 Health Check Report</h1>
+<h3>Business Date : 2019-11-29 </h3>
+<table border ='1'><th><td>Applicationr</td><td>Status</td><td>Comments</td></th>
+<tr><td>Inbound Folders </td><td>red</td><td> null</td></tr>
+<tr><td>Logged out Disconnected Users </td><td> green</td><td> null</td></tr>
+<tr><td>BDL Files Processed </td><td> green</td><td>null</td></tr>
+<tr><td>TitaniumFS Folder</td><td> green</td><td>null</td></tr>
+<tr><td>CA WA Agent Status </td><td> green</td><td> null</td></tr>
+<tr><td>SQL Agent Status</td><td>green </td><td>null</td></tr>
+<tr><td>Ganglia Status | #FFBF00 </td><td> null</td></tr>
+</table>
+</body>
+</html>

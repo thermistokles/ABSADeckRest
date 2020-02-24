@@ -1,0 +1,133 @@
+<app-logoutnav></app-logoutnav>
+<div class="container">
+  <br>
+  <h4 class="center-align"><b>Batch Health Check</b></h4>
+
+  <br>
+<h6 class="center-align"><p> <b>Business date:</b> {{currDate | date:'fullDate'}}</p></h6>
+    <form name="form" #f="ngForm"  (ngSubmit)="sendStatus()" >
+
+
+    <table class="highlight striped">
+    <thead>
+    <tr class="table-primary"><th width="30%" scope="col">Application</th><th scope="col">Status</th><th scope="col">Comments</th></tr>
+    </thead>
+    
+    
+    <tbody>
+        <tr>
+            <td>Inbound Folder : </td>
+            <td><select  class="browser-default" name="inboundFolders" [(ngModel)]="dm9Prop.inboundFolders">
+                <option value="" hidden>--Select-- </option>
+                    <option value="green">Green</option>
+                    <option value="#FFBF00">Amber</option>
+                      <option value="red">Red</option>
+                   
+              </select> </td>
+            <td><input maxlength="100" placeholder="Enter comments" required type="text" name="inboundFoldersComment"   [(ngModel)]="dm9Prop.inboundFoldersComment" ></td>
+            
+        </tr>
+         <tr>
+            <td>Logged out Disconnected Users : </td>
+                <td><select class="browser-default" name="loggedOut"  [(ngModel)]="dm9Prop.loggedOut">
+                    <option value="" hidden>--Select-- </option>
+                    <option value="green">Green</option>
+                    <option value="#FFBF00">Amber</option>
+                      <option value="red">Red</option>
+                   
+              </select> </td>
+            <td><input maxlength="100" placeholder="Enter comments" required type="text" name="loggedOutComment"  [(ngModel)]="dm9Prop.loggedOutComment"></td>
+            
+        </tr>
+         <tr>
+            <td>BDL Files Processed :  </td>
+                <td><select class="browser-default" name="bdlFiles"  [(ngModel)]="dm9Prop.bdlFiles"> 
+                    <option value="" hidden>--Select-- </option>
+                    <option value="green">Green</option>
+                    <option value="#FFBF00">Amber</option>
+                      <option value="red">Red</option>
+                   
+              </select> </td>
+            <td><input maxlength="100" placeholder="Enter comments" required  type="text" name="bdlFilesComment"  [(ngModel)]="dm9Prop.bdlFilesComment" ></td>
+            
+        </tr>
+         <tr>
+            <td>TitaniumFS Folder : </td>
+                <td><select class="browser-default" name="titaniumFs"  [(ngModel)]="dm9Prop.titaniumFs">
+                    <option value="" hidden>--Select-- </option>
+                    <option value="green">Green</option>
+                    <option value="#FFBF00">Amber</option>
+                      <option value="red">Red</option>
+                   
+              </select> </td>
+            <td><input maxlength="100" placeholder="Enter comments" required type="text" name="titaniumFsComment"   [(ngModel)]="dm9Prop.titaniumFsComment"></td>
+            
+        </tr>
+         <tr>
+            <td>CA WA Agent Status</td>
+                <td><select class="browser-default" name="caWade"  [(ngModel)]="dm9Prop.caWade">
+                    <option value="" hidden>--Select-- </option>
+                    <option value="green">Green</option>
+                    <option value="#FFBF00">Amber</option>
+                      <option value="red">Red</option>
+                   
+              </select> </td>
+            <td><input maxlength="100" placeholder="Enter comments" required type="text" name="caWadeComment"  [(ngModel)]="dm9Prop.caWadeComment" ></td>
+            
+        </tr>
+         <tr>
+            <td>SQL Agent Status </td>
+                <td><select class="browser-default" name="sqlAgent"  [(ngModel)]="dm9Prop.sqlAgent">
+                    <option value="" hidden>--Select-- </option>
+                    <option value="green">Green</option>
+                    <option value="#FFBF00">Amber</option>
+                      <option value="red">Red</option>
+                   
+              </select> </td>
+            <td><input maxlength="100" placeholder="Enter comments" required type="text" name="sqlAgentComment"  [(ngModel)]="dm9Prop.sqlAgentComment" ></td>
+            
+        </tr>
+        
+          <tr>
+            <td>Ganglia Status</td>
+                <td><select  class="browser-default" name="gangliaStatus"  [(ngModel)]="dm9Prop.gangliaStatus">
+                    <option value="" hidden>--Select-- </option>
+                    <option value="green">Green</option>
+                    <option value="#FFBF00">Amber</option>
+                      <option value="red">Red</option>
+                   
+              </select> </td>
+            <td><input maxlength="100" placeholder="Enter comments" required type="text" name="gangliaStatusComment"  [(ngModel)]="dm9Prop.gangliaStatusComment" ></td>
+            
+        </tr>
+       </tbody>
+    
+    
+    </table>
+    
+    <br>
+    <br>
+    <div class="row center">
+    <div class="col s2"> <input type="button" (click)="sendEmail()" value="Email" class="btn btn-large red darken-4"/></div> <div class="col s8"></div> <div class="col s2 center"><input type="submit" value="Submit" class="btn btn-large red darken-4"/></div>  
+    </div>    
+    
+    </form>  
+    <!--</tbody>
+    
+    
+    </table>
+    
+    <br>
+    <br>
+    <div class="row">
+       <div class="col s2"> <input type="button" (click)="sendEmail()" value="Email" class="btn btn-primary red darken-3"/></div><div class="col s8"></div><div class="col s2"><input type="submit" value="Submit" class="btn btn-primary red darken-3"/></div>
+    </div>
+
+    
+    
+    </form>-->
+
+
+
+
+</div>

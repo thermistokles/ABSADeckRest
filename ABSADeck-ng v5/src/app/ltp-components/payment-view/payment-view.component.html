@@ -1,0 +1,36 @@
+<app-logoutnav></app-logoutnav>
+<div class="container">
+<app-tabsltp></app-tabsltp>
+        <br>
+       <h4 class="center-align">Payment Report</h4>
+      
+        <br>
+        <br>
+      
+      <table class="highlight">
+        <thead>
+        <tr>
+          <th>Payments</th>
+          <th>Count</th>
+          <th>Start Time</th>
+          <th>End Time</th>
+          <th>Duration</th>
+        </tr>
+        </thead>
+
+    <tbody>
+            <tr *ngFor="let x of payments">
+                
+                <td>{{x.payments}}</td>
+                <td>{{x.count}}</td>
+                <td>{{x.startDateTime}}</td>
+                <td>{{x.endDateTime}}</td>
+                <td>{{x.duration}}</td>
+
+            </tr>
+        </tbody>
+    </table>
+    <br/>
+    <br/>
+    </div> 
+   

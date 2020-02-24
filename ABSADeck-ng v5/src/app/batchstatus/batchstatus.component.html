@@ -1,0 +1,93 @@
+<!--<app-logoutnav></app-logoutnav>
+<div class="container">
+<app-tabs></app-tabs>
+
+  <br>
+  <br>
+<h6><p class="right-align"> <b>Business date:</b> {{today | date:'fullDate'}}</p></h6>
+
+
+<input type="text" id="tail-datetime-field" class="tail-datetime-field">
+
+<table class="highlight">
+  <thead>
+  <tr>
+    <th class="center-align">Country</th>
+    <th>Status</th>
+    <th>Complete %</th>
+    <th>Start time</th>
+    <th>End time</th>
+    <th>Duration</th>
+    <th>Remark</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let batch of currentBatches; let i = index">-->
+
+<app-logoutnav></app-logoutnav>
+<div class="container">
+<!--<app-tabs></app-tabs>-->
+
+  <br>
+ <h4 class="center-align"><b>Batch Status for DM 9</b></h4>
+ 
+  <br>
+<h6 class="center-align"><p> <b>Business date:</b> {{today | date:'fullDate'}}</p></h6>
+
+
+<table class="highlight striped centered">
+  <thead>
+  <tr>
+    <th class="center-align">Country</th>
+    <th>Status</th>
+    <th width="12%">Complete %</th>
+    <th>Start time</th>
+    <th>End time</th>
+    <th>Duration</th>
+    <th>Remark</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let batch of currentBatches; let i = index">
+      <td>{{ batch.country }}</td>
+      <td width="10%">
+        
+        <select  class="browser-default" [(ngModel)]="batch.status">
+          <option value="" hidden>--Select-- </option>
+          <option value="green">Green</option>
+          <option value="#ffbf00">Amber</option>
+          <option value="red">Red</option>  
+        </select>
+        
+       <!-- <input type="text" [(ngModel)]="batch.status" /></td>-->
+      <td><input type="text" [(ngModel)]="batch.percentCompleted" /></td>
+      <td width="25%">
+         <input type="text" [(ngModel)]="batch.startDateTime" [value]="startdt[i]" (change)="isChangedst(i)"/>
+          <a class="right" (click)="isChangedst(i); setCurrentStartDateTime(i)"> <i class="material-icons">restore</i> </a>
+      </td>
+      <td width="25%">
+        <input class="left" type="text" [(ngModel)]="batch.stopDateTime" [value]="stopdt[i]" type="text" (change)="isChangedsp(i)" /> <!--id="tail-datetime-field" class="tail-datetime-field" (click)="dateTimePicker()"-->
+        <a class="right" (click)="isChangedsp(i); setCurrentStopDateTime(i,batch.stopDateTime); calculateDuration(i)"><i class="material-icons">restore</i></a>
+      </td>
+      <td><input type="text" [(ngModel)]="batch.batchDuration" [value] = "calculatedDuration[i]"/></td>
+      <td width="17%"><input type="text" placeholder="Enter Remarks" [(ngModel)]="batch.remarks" required/></td>
+    </tr>
+  </tbody>
+  </table>
+
+<br>
+  <div class="row center">
+    <div class="col s2">  <button class="btn waves-effect btn-large <waves-light></waves-light> red darken-4" (click)="sendEmail()"> Email</button>
+</div> <div class="col s8"></div> <div class="col s2 center">  <button class="btn waves-effect btn-large <waves-light></waves-light> red darken-4" (click)="submit()"> Submit</button>
+</div>  
+    </div>  
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  
+</div>
+
+

@@ -1,0 +1,48 @@
+<header>
+  <!-- Dropdown Structure -->
+  <ul id="dropdown" class="dropdown-content">
+    <li><a class="black-text" href="/dm9" >Debt Manager</a></li>
+    <li class="divider"></li>
+    <li><a class="black-text" href="/VisionPlus">VisionPlus</a></li>
+    <li><a class="red darken-3 white-text" href="#!">Logout</a></li>
+  </ul>
+  <nav>
+    <div class="nav-wrapper red darken-3">
+      <a href="#!" class="brand-logo" style="margin-left: 1rem;"> <i class="material-icons">business</i>Absa deck</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="/login"></a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+  
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  
+
+<div class="container">
+  <div class="row">
+    <div class="col s12 m6">
+      <div class="card red darken-3">
+        <div class="card-content white-text">
+          <span class="card-title">Login</span>
+          <label class="white-text" for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" [(ngModel)]="uname">
+        
+            <label class="white-text" for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" [(ngModel)]="pass">
+
+        </div>
+        <div class="card-action">
+          <a class="white-text" (click)="onLogin()">Login</a>
+          <a class="white-text" href="">Cancel</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

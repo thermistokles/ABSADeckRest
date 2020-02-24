@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;}
+
+/* Style the header */
+#header {
+  background-color: #b91320;
+  padding: 10%;
+  text-align: center;
+  font-size: 100%;
+  color:White;
+  height: 100%;
+  width: 100%;
+  
+}
+/* Style the footer */
+#footer {
+  /*background-color: #777;*/
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+#healthcheck {
+  font-family: 'Source Sans Pro', sans-serif;  border-collapse: collapse;
+  width: 40%;height:100%;
+  padding: 10px;
+}
+
+#healthcheck td, #healthcheck th {
+  font-family: 'Source Sans Pro', sans-serif;  border: 1px solid black;
+  padding: 8px;
+word-wrap:break-word;
+}
+
+#healthcheck tr:nth-child(even){background-color: #f2f2f2;}
+
+#healthcheck tr:hover {background-color: #ddd;}
+
+#healthcheck th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #b91320;
+  color: white;
+}
+</style>
+</head>
+<body bgcolor="#DCDCDC">
+  <center>
+<table id="healthcheck"><tr><td  style="border-right:1px solid #b91320;padding:0px; background-color: #b91320;" colspan="6"><div id="header">
+  <!--<img src="header.jpg" alt="absalogo" align:"center">-->
+  
+  <h4 align="center">DM9 Batch Status  </h4>  
+<h4 align="center">Business Date : 2019-12-12 </h4><br>
+</div></td><td style="border-left:1px solid #b91320;" bgcolor="#b91320"><img height="auto" width="auto"  src=cid:logo></td><tr><th>Country</th><th>Status</th><th>Complete %</th><th>Start Time</th><th>End Time</th><th>Duration</th><th>Remark</th></tr>
+<tr><td bgcolor="white">Kenya </td><td bgcolor="green"> </td><td bgcolor="white"> 0</td><td bgcolor="white">2019-12-12 13:30</td><td bgcolor="white">2019-12-12 16:14:40</td><td bgcolor="white">2:44:40</td><td bgcolor="white"></td></tr>
+<tr><td bgcolor="white">NBC </td><td bgcolor="green"> </td><td bgcolor="white"> 0</td><td bgcolor="white">2019-12-12 13:30</td><td bgcolor="white">2019-12-12 16:14:39</td><td bgcolor="white">2:44:39</td><td bgcolor="white"></td></tr>
+<tr><td bgcolor="white">BBT </td><td bgcolor="green"> </td><td bgcolor="white"> 0</td><td bgcolor="white">2019-12-12 13:30</td><td bgcolor="white">2019-12-12 16:14:34</td><td bgcolor="white">2:44:34</td><td bgcolor="white"></td></tr>
+<tr><td bgcolor="white">Mozambique </td><td bgcolor="green"> </td><td bgcolor="white"> 0</td><td bgcolor="white">2019-12-12 13:30</td><td bgcolor="white">2019-12-12 16:14:38</td><td bgcolor="white">2:44:38</td><td bgcolor="white"></td></tr>
+<tr><td bgcolor="white">Ghana </td><td bgcolor="red"> </td><td bgcolor="white"> 0</td><td bgcolor="white">2019-12-12 13:30</td><td bgcolor="white">2019-12-12 16:14:33</td><td bgcolor="white">2:44:33</td><td bgcolor="white"></td></tr>
+<tr><td bgcolor="white">Seychelles </td><td bgcolor="#ffbf00"> </td><td bgcolor="white"> 0</td><td bgcolor="white">2019-12-12 13:30</td><td bgcolor="white">2019-12-12 16:14:32</td><td bgcolor="white">2:44:32</td><td bgcolor="white"></td></tr>
+<tr><td bgcolor="white">Uganda </td><td bgcolor="green"> </td><td bgcolor="white"> 0</td><td bgcolor="white">2019-12-12 13:30</td><td bgcolor="white">2019-12-12 16:14:38</td><td bgcolor="white">2:44:38</td><td bgcolor="white"></td></tr>
+<tr><td bgcolor="white">Zambia </td><td bgcolor="red"> </td><td bgcolor="white"> 0</td><td bgcolor="white">2019-12-12 13:30</td><td bgcolor="white">2019-12-12 16:14:32</td><td bgcolor="white">2:44:32</td><td bgcolor="white"></td></tr>
+<tr><td bgcolor="white">Botswana </td><td bgcolor="green"> </td><td bgcolor="white"> 0</td><td bgcolor="white">2019-12-12 13:30</td><td bgcolor="white">2019-12-12 16:14:35</td><td bgcolor="white">2:44:35</td><td bgcolor="white"></td></tr>
+<tr><td bgcolor="white">Mauritius </td><td bgcolor="#ffbf00"> </td><td bgcolor="white"> 0</td><td bgcolor="white">2019-12-12 13:30</td><td bgcolor="white">2019-12-12 16:14:30</td><td bgcolor="white">2:44:30</td><td bgcolor="white"></td></tr>
+<tr><td style="padding:0px;" bgcolor="white" colspan="7"><br><pre align="left">   Regards, <br>   DM Support Team</pre><div id="footer">\r<img width="auto" align=baseline border=0 hspace=0 src=cid:footer>					"</div></td></tr></table>
+</center>

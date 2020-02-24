@@ -1,0 +1,34 @@
+<app-logoutnav></app-logoutnav>
+<div class="container">
+  <app-tabs></app-tabs>
+  <br>
+  <h4 class="center-align">Kamls Health Status for Busniess date: {{kamlsHealth[0].kamlsDate}}</h4>
+
+  <br>
+  <br>
+
+  <table class="centered">
+    <thead>
+    <tr>
+      <th>Application</th>
+      <th>Status</th>
+      <th>Comment</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let kamlsHealth of kamlsHealth" (click)="getAllBatches(kamlsHealth)">
+      <td><input class="myinput" [(ngModel)]="kamlsHealth.kamlsApplication" (change)="updatekamlsHealth(kamlsHealth)" type="text"/></td>
+      <td><input [(ngModel)]="kamlsHealth.kamlsStatus" (change)="updatekamlsHealth(kamlsHealth)" list="status" /><datalist id="status"><option value="green"><option value="amber"><option value="red"></datalist></td>
+      <td><input [(ngModel)]="kamlsHealth.kamlsComment" (change)="updatekamlsHealth(kamlsHealth)" type="text"/></td>
+    </tr>
+    </tbody>
+  </table>
+
+  <br>
+  <a class="btn-floating btn-large waves-effect waves-light right red"
+     (click)="updatekamlsHealth()"
+  ><i class="material-icons">add</i> New notebook
+  </a>
+</div>
+
+

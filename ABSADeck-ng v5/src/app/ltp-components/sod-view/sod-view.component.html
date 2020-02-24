@@ -1,0 +1,79 @@
+<app-logoutnav></app-logoutnav>
+<div class="container">
+        <br>
+       <h4 class="center-align">Application Availability </h4>
+      
+        <br>
+        <br>
+      
+      <table class="highlight">
+        <thead>
+        <tr>
+          <!-- <th>Country</th> -->
+          <th>Application</th>
+          <th>Status</th>
+          <th>Comments</th>
+        </tr>
+        </thead>
+
+    <tbody>
+            <tr *ngFor="let x of sods ">
+                
+                <td>{{x.appName}}</td>
+                <td>{{x.status}}</td>
+                <td>{{x.comments}}</td>
+                
+            </tr>
+           
+        </tbody>
+
+    
+    </table>
+    
+    <br/>
+    
+   <!-- <a [routerLink]="['app-addsod']" >Add New SOD Application Availability</a>  -->
+    
+    <br/>
+    
+    </div> 
+   
+
+
+<!-- 
+    <div class="panel">
+           for reading title from component class
+         <div class="panel-body">
+                 
+         <div class="table-responsive">
+             
+         <table border="1px" class="table">
+             <thead>
+                 <tr>
+                     <th>Crop Name</th>
+                     <th>Crop Type</th>
+                     <th>Base Price</th>
+                     <th>Current Bid</th>
+                 </tr>
+             </thead>
+             <tbody>
+                 <tr *ngFor="let x of dashboard">
+                     
+                     <td>{{x.cropName}}</td>
+                     <td>{{x.cropType}}</td>
+                     <td>{{x.priceperquintal}}</td>
+                     <td>{{x.currentBid}}</td>
+                 </tr>
+                
+             </tbody>
+         </table>
+        <br>
+        <br>
+        
+         <td>Bid Amount: <input type="text" name="bidamount"></td>
+         <br>
+         <br>
+         <td><button type="submit">Confirm</button></td>
+         </div>
+     </div>
+     </div> -->

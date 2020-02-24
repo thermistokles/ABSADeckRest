@@ -1,0 +1,99 @@
+<app-ltplogoutnav></app-ltplogoutnav>
+<div class="container">
+  <br>
+  <h4 class="center-align"><b>Batch Status</b></h4>
+    <br>
+ <div class="row">
+    <div class="col s6">
+      <div class="card blue-grey lighten-5">
+        <div class="card-content black-text">
+          <div class="row">
+           <div class="col s2"> <b>From: </b> </div>
+           <div class="col s3"> <input type="text" [(ngModel)]="fromDate" id="tail-datetime-field" class="black-text tail-datetime-field"> </div>
+           <div class="col s1"> <b>To: </b> </div>
+           <div class="col s3"> <input type="text" [(ngModel)]="toDate" id="tail-datetime-field" class="black-text tail-datetime-field"> </div>
+           <div class="col s1"> <button id="fetchButton" class="btn light-blue lighten-5" (click)=getByRange()><b class="black-text">Fetch</b></button> </div>
+        </div>
+      </div>
+     </div>
+    </div>
+    <div class="col s3">
+        <div class="card blue-grey lighten-5">
+          <div class="card-content black-text">
+            <b>Date: </b>
+            <input type="text" [(ngModel)]="selectedDate" (change)="getAllBatchesTemp(); getByDate()" id="tail-datetime-field" class="black-text tail-datetime-field">
+          </div>
+
+      </div>
+    </div>
+    <div class="col s3">
+      <div class="card blue-grey lighten-5">
+        <div class="card-content black-text">
+          <b>Country: </b>{{country}}
+         <!-- <td><input type="text" [(ngModel)]="country" (change)="getByCountry()"></td> -->
+       
+          <select id="countryInput" [(ngModel)]="country" class="browser-default blue-grey lighten-5" (ngModelChange)="countryChanged($event)" [value]="country">
+            <option *ngFor="let cntry of countries"  [value]="cntry.id" >
+              {{cntry.name}}
+            </option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  
+      
+      
+      
+
+
+      
+
+
+
+
+
+  <table class="highlight" #TABLE #table>
+    <thead>
+    <tr>
+      <th>Country</th>
+      <th>Status</th>
+      <th>Complete %</th>
+      <th>Start time</th>
+      <th>Stop time</th>
+      <th>Duration</th>
+      <th>Remark</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="" *ngFor="let batch of batches">
+      <td>{{ batch.country }}</td>
+      <td [attr.bgcolor]="batch.status" *ngIf="batch.status==='#ffbf00'" ><font [attr.color]="batch.status">amber</font></td>
+      <td [attr.bgcolor]="batch.status" *ngIf="batch.status!='#ffbf00'" ><font [attr.color]="batch.status">{{batch.status}}</font></td>
+
+      <td>{{ batch.percentCompleted }}</td>
+      <td>{{ batch.startDateTime }}</td>
+      <td>{{ batch.stopDateTime }}</td>
+      <td>{{ batch.batchDuration }}</td>
+      <td>{{ batch.remarks }}</td>
+    </tr>
+    </tbody>
+  </table>
+
+  <br>
+  <a class="btn-floating btn-large waves-effect waves-light right red"
+     (click)="downloadExcel()"
+  ><i class="material-icons">file_download</i> Excel Download
+  </a>
+
+   <br>
+  <br>
+  <br>
+  <br>
+  <br>
+</div>
+
+
+

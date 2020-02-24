@@ -1,0 +1,97 @@
+<!--  <div class="container">
+    <table class="highlight">
+    <thead>
+    <tr class="table-primary"><th scope="col"><b>APPLICATION NAME</b></th><th scope="col"><b>STATUS</b></th><th scope="col"><b>COMMENTS</b></th><th scope="col"></th></tr>
+    </thead>
+    
+    <c:forEach items="${sod}" var="sod">
+    <tbody>
+        <tr>
+            <td> <c:out value="${sod.appName}"/> </td>  
+            <td> <c:out value="${sod.status}"/> </td>
+            <td> <c:out value="${sod.comments}"/> </td>
+        </tr>
+    </tbody>
+    
+</c:forEach> -->
+<app-ltplogoutnav></app-ltplogoutnav>
+<div class="container">
+        <br>
+       <h4 class="center-align">Application Availability December 2019 </h4>
+      
+        <br>
+        <br>
+      
+      <table class="highlight">
+        <thead>
+        <tr>
+          <!-- <th>Country</th> -->
+          <th>Application</th>
+          <th>Status</th>
+          <th>Comments</th>
+          <th>Business Date</th>
+        </tr>
+        </thead>
+
+    <tbody>
+            <tr *ngFor="let x of sods ">
+                
+                <td>{{x.appName}}</td>
+                <td>{{x.status}}</td>
+                <td>{{x.comments}}</td>
+                <td>{{x.statusDate}}</td>
+                
+            </tr>
+           
+        </tbody>
+
+    
+    </table>
+    
+ 
+    
+   <!-- <a [routerLink]="['app-addsod']" >Add New SOD Application Availability</a>  -->
+    
+    <br/>
+    
+    </div> 
+   
+
+
+<!-- 
+    <div class="panel">
+           for reading title from component class
+         <div class="panel-body">
+                 
+         <div class="table-responsive">
+             
+         <table border="1px" class="table">
+             <thead>
+                 <tr>
+                     <th>Crop Name</th>
+                     <th>Crop Type</th>
+                     <th>Base Price</th>
+                     <th>Current Bid</th>
+                 </tr>
+             </thead>
+             <tbody>
+                 <tr *ngFor="let x of dashboard">
+                     
+                     <td>{{x.cropName}}</td>
+                     <td>{{x.cropType}}</td>
+                     <td>{{x.priceperquintal}}</td>
+                     <td>{{x.currentBid}}</td>
+                 </tr>
+                
+             </tbody>
+         </table>
+        <br>
+        <br>
+        
+         <td>Bid Amount: <input type="text" name="bidamount"></td>
+         <br>
+         <br>
+         <td><button type="submit">Confirm</button></td>
+         </div>
+     </div>
+     </div> -->

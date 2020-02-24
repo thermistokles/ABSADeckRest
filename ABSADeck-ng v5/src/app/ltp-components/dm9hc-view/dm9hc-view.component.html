@@ -1,0 +1,81 @@
+<app-ltplogoutnav></app-ltplogoutnav>
+ <div class="container">
+    <h4 class="center-align"><b>Batch Health Check</b></h4>
+    <br>
+    <div class="row">
+        <div class="col s3"><h5 >Business Date :</h5> </div>
+        <div class="col s2"><input width="70%" class="browser-default" type="submit" (change)="getDM9Report()" [(ngModel)]="businessdate" name="date" id="tail-datetime-field" class="tail-datetime-field"></div>
+    </div>
+    <table class="table table-hover">
+    <thead>
+    <tr class="table-primary"><th scope="col">Application</th><th scope="col">Status</th><th scope="col">Comments</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Health Checks for Inbound Folder : </td>
+                        <!--<td><div style="height:20px; width:60px" [ngStyle]="{background: dm9report?.inboundFolders}"></div></td>-->
+
+            <td [ngStyle]="{background: dm9report?.inboundFolders}"></td>
+              <td>{{dm9report?.inboundFoldersComment}}</td>
+            
+        </tr>
+         <tr>
+            <td>Logged out Disconnected Users : </td>
+                        <!--<td><div style="height:20px; width:60px; background:green" [ngStyle]="{background: dm9report?.loggedOut}"></div></td>-->
+
+            <td [ngStyle]="{background: dm9report?.loggedOut}"></td>
+              <td>{{dm9report?.loggedOutComment}}</td>
+            
+        </tr>
+         <tr>
+            <td>BDL Files Processed :  </td>
+                        <!--<td><div style="height:20px; width:60px; background:green" [ngStyle]="{background: dm9report?.bdlFiles}"></div></td>-->
+
+            <td [ngStyle]="{background: dm9report?.bdlFiles}"></td>
+            <td>{{dm9report?.bdlFilesComment}}</td>
+            
+        </tr>
+         <tr>
+            <td>Health Checks for TitaniumFS Folder : </td>
+                        <!--<td><div style="height:20px; width:60px; background:green" [ngStyle]="{background: dm9report?.titaniumFs}"></div></td>-->
+
+            <td [ngStyle]="{background: dm9report?.titaniumFs}"></td>
+                <td>{{dm9report?.titaniumFsComment}}</td>
+            
+        </tr>
+         <tr>
+            <td>CA WA Agent Status</td>
+                        <!--<td><div style="height:20px; width:60px; background:green" [ngStyle]="{background: dm9report?.caWade}"></div></td>-->
+
+            <td [ngStyle]="{background: dm9report?.caWade}"></td>
+         <td>{{dm9report?.caWadeComment}}</td>
+            
+        </tr>
+         <tr>
+            <td>SQL Agent Status </td>
+                        <!--<td><div style="height:20px; width:60px; background:green" [ngStyle]="{background: dm9report?.sqlAgent}"></div></td>-->
+
+            <td [ngStyle]="{background: dm9report?.sqlAgent}"></td>
+        <td>{{dm9report?.sqlAgentComment}}</td>
+            
+        </tr>
+        
+          <tr>
+            <td>Ganglia Status</td>
+                        <!--<td><div style="height:20px; width:60px; background:green" [ngStyle]="{background: dm9report?.gangliaStatus}"></div></td>-->
+
+            <td [ngStyle]="{background: dm9report?.gangliaStatus}"></td>
+           <td>{{dm9report?.gangliaStatusComment}}</td>
+            
+        </tr>
+        
+    </tbody>
+    
+    </table>
+    </div>
+
+    <br>
+
+
+    <br>
+    <br>

@@ -1,0 +1,42 @@
+<header>
+  <!-- Dropdown Structure -->
+  <ul id="dropdown" class="dropdown-content">
+    <li><a class="black-text" href="/dm9" >Debt Manager</a></li>
+    <li class="divider"></li>
+    <li><a class="black-text" href="/VisionPlus">VisionPlus</a></li>
+    <li><a class="red darken-3 white-text" href="#!">Logout</a></li>
+  </ul>
+  <nav>
+    <div class="nav-wrapper red darken-3">
+      <a href="#!" class="brand-logo" style="margin-left: 1rem;"> <i class="material-icons">business</i><b>ABSA</b> Deck</a>
+      <!--<ul class="right hide-on-med-and-down">
+        <li><a class="modal-trigger" href="#login">Login</a></li>
+      </ul>-->
+    </div>
+  </nav>
+
+
+  <!-- Modal Structure -->
+  <div id="login" class="modal">
+    <div class="modal-content">
+      <h5>Login</h5>
+      <div class="row">
+        <div class="input-field row col s4  l6">
+          <input id="first_name" type="text" class="validate" [(ngModel)]="uname">
+          <label for="first_name">Username</label>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="input-field col s4  l6">
+          <input id="first_name" type="password" class="validate" [(ngModel)]="pass">
+          <label for="first_name">Password</label>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer row">
+      <div class="col s2 offset-s8"><a class="waves-effect btn red darken-3" href="">Cancel</a></div>
+      <div class="col s2 "><a class="waves-effect btn red darken-3" (click)="onLogin()">Login</a></div>
+    </div>
+  </div>
+</header>

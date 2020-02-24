@@ -1,0 +1,136 @@
+ input, input[type=text]:not(.browser-default), input[type=datetime-local]:not(.browser-default) {
+  border: none;
+  outline: none;
+  height: 2rem;
+  width: 100%;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  transition: box-shadow .50s, border .50s;
+}
+label {
+    float: left;
+}
+span {
+    display: block;
+    overflow: hidden;
+    padding: 0 4px 0 6px;
+}
+input {
+    width: 100%;
+}
+
+
+/*option, select{ 
+
+    background-color: #82caff;
+}
+*/
+/* .indicators {
+    background-color: #FC3;
+}
+*/
+/*img {
+  z-index: -1;
+  position: relative;
+}*/
+
+/*.text {
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  z-index: 20;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0,0,0,.6);
+}*/
+
+.text {
+    position: relative;
+    top: 0%;
+    z-index: 20;
+    color: white;
+}
+
+.bgimg1 {
+    background-image: url('./assets/city4.jpg');
+}
+
+.bgimg2 {
+    background-image: url('./assets/p3.jpg');
+}
+
+.bgimg3 {
+    background-image: url('./assets/city1ee.jpg');
+}
+
+blockquote {
+font-family: Georgia, serif;
+font-size: 18px;
+font-style: italic;
+margin: 2.5em 0;
+padding: 0.15em 40px;
+line-height: 1.45;
+position: relative;
+color: #383838;
+border-left: 0px solid #ee6e73;
+}
+
+blockquote:before {
+display: block;
+padding-left: 10px;
+content: "\201C";
+font-size: 80px;
+position: absolute;
+left: -20px;
+top: -20px;
+color: #fff;
+}
+
+blockquote cite {
+color: #999999;
+font-size: 14px;
+display: block;
+margin-top: 5px;
+}
+ 
+blockquote cite:before {
+content: "\2014 \2009";
+}
+
+
+svg {
+  width: 70px;
+  height: 70px;
+}
+svg:hover {
+  fill: red;
+}
+
+
+tbody, select  {
+  background-color: #d9edf7;
+}
+.app-img {
+    height: 50px;
+    width: 50px;
+}
+
+input::-webkit-input-placeholder {
+    color: #8e8e8e
+}
+
+
+.tabs .tab a{
+    color:#000;
+} /*Black color to the text*/
+/*.tabs .tab a:hover {
+    background-color:#eee;
+    color:#000;
+} /*Text color on hover*/*/
+/*.tabs .tab a.active {
+    background-color:#888;
+    color:#000;
+} /*Background and text color when a tab is active*/
+.tabs .indicator {
+    background-color:white;
+} /*Color of underline*/

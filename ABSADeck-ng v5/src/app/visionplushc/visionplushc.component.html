@@ -1,0 +1,113 @@
+<app-logoutnav></app-logoutnav>
+
+
+<div class="container">
+<app-tabs></app-tabs>
+<form  name="form" #f="ngForm"  (ngSubmit)="sendVPStatus()" >
+
+
+
+
+<h3><b>Vision Plus Health Check</b></h3>
+  <h5>Business Date : {{currDate | date:'dd-MM-yyyy'}}</h5>
+
+<table class="table table-hover">
+<thead>
+
+<tr class="table-primary"><th scope="col">Country</th><th scope="col">Status</th><th scope="col">Comments</th></tr>
+</thead>
+
+
+<tbody>
+  
+     
+  
+    
+     <tr>
+	    <td>Kenya :  </td>
+	    	<td>
+	    	<label> <input  type="radio" name="kenyaSod" value="green" checked  [(ngModel)]="vpProp.kenyaSod"> <span>Enabled </span>
+	    	</label> <label> <input type="radio" name="kenyaSod" value="red" [(ngModel)]="vpProp.kenyaSod"> <span>Disabled </span>
+	    	 </label></td>
+	    <td><input type="text" name="kenyaSodComment"  [(ngModel)]="vpProp.kenyaSodComment"> </td>
+	    
+    </tr>
+     <tr>
+	    <td>Mozambique : </td>
+	    	<td><label><input type="radio" name="mozambiqueSod" value="green" checked [(ngModel)]="vpProp.mozambiqueSod"> <span>Enabled </span>
+  </label><label><input type="radio" name="mozambiqueSod" value="red" [(ngModel)]="vpProp.mozambiqueSod"> <span>Disabled </span>
+	    	 </label></td>
+	    <td> <input type="text" name="mozambiqueSodComment" [(ngModel)]="vpProp.mozambiqueSodComment"> </td>
+	    
+    </tr>
+     <tr>
+	    <td>Mauritius : </td>
+	    	<td>
+	    	<label><input type="radio" name="mauritiusSod" value="green" checked [(ngModel)]="vpProp.mauritiusSod"> <span>Enabled </span></label>
+  <label><input type="radio" name="mauritiusSod" value="red" [(ngModel)]="vpProp.mauritiusSod"> <span>Disabled </span> </label>
+	    	 </td>
+	   
+	    <td> <input type="text" name="mauritiusSodComment" [(ngModel)]="vpProp.mauritiusSodComent"> </td>
+	    
+  
+</tbody>
+
+
+</table>
+
+<br>
+<h3><b>Vision Plus Batch Status</b></h3>
+
+<table class="table table-hover">
+<thead>
+
+<tr class="table-primary"><th scope="col">Country</th><th scope="col">Status</th><th scope="col">Comments</th></tr>
+</thead>
+
+
+<tbody>
+  
+     <tr>
+	    <td>Kenya : </td>
+	    	<td><select class="browser-default" name="kenyaBatch" [(ngModel)]="vpProp.kenyaBatch">
+  			  <option value="green">Green</option>
+  			  <option value="#FFBF00">Amber</option>
+  		   	 <option value="red">Red</option>
+ 			  
+  		</select> </td>
+	    <td><input type="text" name="kenyaBatchComment" [(ngModel)]="vpProp.kenyaBatchComment"> </td>
+	    
+    </tr>
+     <tr>
+	    <td>Mozambique : </td>
+	    	<td><select class="browser-default" name="mozambiqueBatch" [(ngModel)]="vpProp.mozambiqueBatch">
+  			  <option value="green">Green</option>
+  			  <option value="#FFBF00">Amber</option>
+  		   	 <option value="red">Red</option>
+ 			  
+  		</select> </td>
+	    <td> <input type="text" name="mozambiqueBatchComment" [(ngModel)]="vpProp.mozambiqueBatchComment"> </td>
+	    
+    </tr>
+     <tr>
+	    <td>Mauritius : </td>
+	    	<td><select class="browser-default" name="mauritiusBatch" [(ngModel)]="vpProp.mauritiusBatch">
+  			  <option value="green">Green</option>
+  			  <option value="#FFBF00">Amber</option>
+  		   	 <option value="red">Red</option>
+ 			  
+  		</select> </td>
+	    <td> <input type="text" name="mauritiusBatchComment" [(ngModel)]="vpProp.mauritiusBatchComment"> </td>
+	    
+  
+</tbody>
+
+
+</table>
+
+<input type="submit" value="Submit" class="btn btn-primary"/>
+
+
+</form>
+
+</div>
